@@ -1,3 +1,221 @@
-.isHidden{
-    color:gray
+
+/* Slide in Animations  */
+
+/* Slide in from left  */
+
+.slideIn-R{
+    transform: translateX(0);
+    opacity: 1;
+    transition: all 0.5s ease;
+}
+.slideIn-R-Prev{
+    opacity: 0;
+    transform:translateX(100%)
+}
+
+/* Slide in from Right  */
+
+.slideIn-L{
+    transform: translateX(0);
+    opacity: 1;
+    transition: all 1.0s ease;
+}
+.slideIn-L-Prev{
+    opacity: 0;
+    transform:translateX(-100%)
+}
+
+/* Slide in from Top  */
+
+.slideIn-T{
+    transform: translateY(0);
+    opacity: 1;
+    transition: all 1.0s ease;
+}
+.slideIn-T-Prev{
+    opacity: 0;
+    transform:translateY(-100%)
+}
+
+/* Slide in from Bottom  */
+
+.slideIn-B{
+    transform: translateY(0);
+    opacity: 1;
+    transition: all 1.0s ease;
+}
+.slideIn-B-Prev{
+    opacity: 0;
+    transform:translateY(100%)
+}
+
+
+/* Fade Animations  */
+
+.fadeIn{
+    opacity: 1;
+    transition: all 2.0s ease;
+}
+.fadeIn-Prev{
+    opacity: 0;
+}
+
+/* fade in Up Animation  */
+
+.fadeIn-U{
+    opacity: 1;
+    transform:translateY(0%);
+    transition: all 1.0s ease;
+}
+.fadeIn-U-Prev{
+    opacity: 0;
+    transform:translateY(20%)
+}
+
+/* fade in Down Animation  */
+
+.fadeIn-D{
+    opacity: 1;
+    transform:translateY(0%);
+    transition: all 1.0s ease;
+}
+.fadeIn-D-Prev{
+    opacity: 0;
+    transform:translateY(-20%)
+}
+
+/* fade in Left Animation  */
+
+.fadeIn-L{
+    opacity: 1;
+    transform:translateX(0%);
+    transition: all 1.0s ease;
+}
+.fadeIn-L-Prev{
+    opacity: 0;
+    transform:translateX(-20%)
+}
+
+/* fade in Right Animation  */
+
+.fadeIn-R{
+    opacity: 1;
+    transform:translateX(0%);
+    transition: all 1.0s ease;
+}
+.fadeIn-R-Prev{
+    opacity: 0;
+    transform:translateX(20%)
+}
+
+/* Zoom animations  */
+
+
+/* Zoom in Animation */
+.zoomIn{
+    opacity: 1;
+    transform:scale(100%);
+    transition: all 1.0s ease;
+}
+.zoomIn-Prev{
+    opacity: 0;
+    transform:scale(50%)
+}
+
+
+/* Zoom in Animation */
+.zoomOut{
+    opacity: 1;
+    transform:scale(100%);
+    transition: all 1.0s ease;
+}
+.zoomOut-Prev{
+    opacity: 0;
+    transform:scale(150%)
+}
+
+
+
+/* Zoom Up Animation */
+.zoom-U{
+    opacity: 1;
+    transform:translate(0%,0%) scale(100%);
+    transition: all 1.0s ease;
+}
+.zoom-U-Prev{
+    opacity: 0;
+    transform:translate(0%,50%) scale(50%)
+}
+
+/* Zoom Down Animation */
+.zoom-D{
+    opacity: 1;
+    transform:translate(0%,0%) scale(100%);
+    transition: all 1.0s ease;
+}
+.zoom-D-Prev{
+    opacity: 0;
+    transform:translate(0%,-50%) scale(50%)
+}
+
+/* Zoom Left Animation */
+.zoom-L{
+    opacity: 1;
+    transform:translate(0%,0%) scale(100%);
+    transition: all 1.0s ease;
+}
+.zoom-L-Prev{
+    opacity: 0;
+    transform:translate(-80%,0%) scale(50%)
+}
+
+/* Zoom Right Animation */
+.zoom-R{
+    opacity: 1;
+    transform:translate(0%,0%) scale(100%);
+    transition: all 1.0s ease;
+}
+.zoom-R-Prev{
+    opacity: 0;
+    transform:translate(80%,0%) scale(50%)
+}
+
+
+/* Rotate Animations  */
+
+/* Rotate In animation  */
+
+.rotateIn{
+    opacity: 1;
+    transform: rotate(0deg) scale(100%);
+    transition: all 1.0s ease;
+}
+.rotateIn-Prev{
+    opacity: 0;
+    transform: rotate(-140deg) scale(50%)
+}
+
+
+/* Rotate Left animation  */
+
+.rotate-L{
+    opacity: 1;
+    transform: rotate(0deg) translateY(0%);
+    transition: all 1.0s ease;
+}
+.rotate-L-Prev{
+    opacity: 0;
+    transform: rotate(110deg) translateY(-100%) 
+}
+
+/* Rotate Left animation  */
+
+.rotate-R{
+    opacity: 1;
+    transform: rotate(0deg) translateY(0%);
+    transition: all 1.0s ease;
+}
+.rotate-R-Prev{
+    opacity: 0;
+    transform: rotate(-110deg) translateY(-100%) 
 }
