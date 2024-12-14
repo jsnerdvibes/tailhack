@@ -133,7 +133,7 @@ function checkClasses (elem){
             elem.classList.remove("rotateIn-Prev")
         elem.classList.add("rotateIn")
         },50)
-    }else if(elem.classList.contains("rotate-L")){  // Rotate animations start here
+    }else if(elem.classList.contains("rotate-L")){
         elem.classList.remove("rotate-L")
         elem.classList.add("rotate-L-Prev")
         setTimeout(()=>{
