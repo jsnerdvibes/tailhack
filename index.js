@@ -5,7 +5,7 @@ const app = express()
 
 let port = process.env.PORT || 4000
 
-app.use(express.static('src'))
+app.use(express.static('public'))
 
 
 app.get('/',(req,res)=>{
