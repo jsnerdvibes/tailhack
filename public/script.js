@@ -3,10 +3,10 @@ const observer = new IntersectionObserver((entries)=>{
     entries.forEach((entry)=>{
 
         if(entry.isIntersecting){
-            checkClasses(entry.target)
+            checkInClasses(entry.target)
             
         }else{
-            console.log("out of observer")
+            checkOutClasses(entry.target)
         }
 
     })
@@ -17,9 +17,9 @@ const  onScroll = document.querySelectorAll(".onScroll")
 onScroll.forEach((el)=>observer.observe(el))
 
 
-function checkClasses (elem){
+function checkInClasses (elem){
 
-    if(elem.classList.contains("slideIn-L")){ //Fade animation starts here
+    if(elem.classList.contains("slideIn-L")){ //Slide animation starts here
         elem.classList.remove("slideIn-L")
         elem.classList.add("slideIn-L-Prev")
         setTimeout(()=>{
@@ -148,6 +148,187 @@ function checkClasses (elem){
         elem.classList.add("rotate-R")
         },50)
     }
+
+
+}
+
+
+function checkOutClasses(elem){
+
+    if(elem.classList.contains("slideOut-L")){ // Slide-out left animation starts here
+        elem.classList.remove("slideOut-L");
+        elem.classList.add("slideOut-L-Prev");
+        setTimeout(() => {
+            elem.classList.remove("slideOut-L-Prev");
+            elem.classList.add("slideOut-L");
+        }, 50);
+    } else if(elem.classList.contains("slideOut-R")) {
+        elem.classList.remove("slideOut-R");
+        elem.classList.add("slideOut-R-Prev");
+        setTimeout(() => {
+            elem.classList.remove("slideOut-R-Prev");
+            elem.classList.add("slideOut-R");
+        }, 50);
+    } else if(elem.classList.contains("slideOut-T")) {
+        elem.classList.remove("slideOut-T");
+        elem.classList.add("slideOut-T-Prev");
+        setTimeout(() => {
+            elem.classList.remove("slideOut-T-Prev");
+            elem.classList.add("slideOut-T");
+        }, 50);
+    } else if(elem.classList.contains("slideOut-B")) {
+        elem.classList.remove("slideOut-B");
+        elem.classList.add("slideOut-B-Prev");
+        setTimeout(() => {
+            elem.classList.remove("slideOut-B-Prev");
+            elem.classList.add("slideOut-B");
+        }, 50);
+    }else if(elem.classList.contains("fadeOut")){  // Fade-out animation starts here
+        elem.classList.remove("fadeOut");
+        elem.classList.add("fadeOut-Prev");
+        setTimeout(() => {
+            elem.classList.remove("fadeOut-Prev");
+            elem.classList.add("fadeOut");
+        }, 50);
+    } else if(elem.classList.contains("fadeOut-U")) {
+        elem.classList.remove("fadeOut-U");
+        elem.classList.add("fadeOut-U-Prev");
+        setTimeout(() => {
+            elem.classList.remove("fadeOut-U-Prev");
+            elem.classList.add("fadeOut-U");
+        }, 50);
+    } else if(elem.classList.contains("fadeOut-D")) {
+        elem.classList.remove("fadeOut-D");
+        elem.classList.add("fadeOut-D-Prev");
+        setTimeout(() => {
+            elem.classList.remove("fadeOut-D-Prev");
+            elem.classList.add("fadeOut-D");
+        }, 50);
+    } else if(elem.classList.contains("fadeOut-L")) {
+        elem.classList.remove("fadeOut-L");
+        elem.classList.add("fadeOut-L-Prev");
+        setTimeout(() => {
+            elem.classList.remove("fadeOut-L-Prev");
+            elem.classList.add("fadeOut-L");
+        }, 50);
+    } else if(elem.classList.contains("fadeOut-R")) {
+        elem.classList.remove("fadeOut-R");
+        elem.classList.add("fadeOut-R-Prev");
+        setTimeout(() => {
+            elem.classList.remove("fadeOut-R-Prev");
+            elem.classList.add("fadeOut-R");
+        }, 50);
+    }else if(elem.classList.contains("zoomOut")){ // Zoom-out animation starts here
+        elem.classList.remove("zoomOut");
+        elem.classList.add("zoomOut-Prev");
+        setTimeout(() => {
+            elem.classList.remove("zoomOut-Prev");
+            elem.classList.add("zoomOut");
+        }, 50);
+    } else if(elem.classList.contains("zoomOut-U")) {
+        elem.classList.remove("zoomOut-U");
+        elem.classList.add("zoomOut-U-Prev");
+        setTimeout(() => {
+            elem.classList.remove("zoomOut-U-Prev");
+            elem.classList.add("zoomOut-U");
+        }, 50);
+    } else if(elem.classList.contains("zoomOut-D")) {
+        elem.classList.remove("zoomOut-D");
+        elem.classList.add("zoomOut-D-Prev");
+        setTimeout(() => {
+            elem.classList.remove("zoomOut-D-Prev");
+            elem.classList.add("zoomOut-D");
+        }, 50);
+    } else if(elem.classList.contains("zoomOut-L")) {
+        elem.classList.remove("zoomOut-L");
+        elem.classList.add("zoomOut-L-Prev");
+        setTimeout(() => {
+            elem.classList.remove("zoomOut-L-Prev");
+            elem.classList.add("zoomOut-L");
+        }, 50);
+    } else if(elem.classList.contains("zoomOut-R")) {
+        elem.classList.remove("zoomOut-R");
+        elem.classList.add("zoomOut-R-Prev");
+        setTimeout(() => {
+            elem.classList.remove("zoomOut-R-Prev");
+            elem.classList.add("zoomOut-R");
+        }, 50);
+    }else if(elem.classList.contains("rotateOut")){ // Rotate-out animation starts here
+        elem.classList.remove("rotateOut");
+        elem.classList.add("rotateOut-Prev");
+        setTimeout(() => {
+            elem.classList.remove("rotateOut-Prev");
+            elem.classList.add("rotateOut");
+        }, 50);
+    } else if(elem.classList.contains("rotateOut-L")) {
+        elem.classList.remove("rotateOut-L");
+        elem.classList.add("rotateOut-L-Prev");
+        setTimeout(() => {
+            elem.classList.remove("rotateOut-L-Prev");
+            elem.classList.add("rotateOut-L");
+        }, 50);
+    } else if(elem.classList.contains("rotateOut-R")) {
+        elem.classList.remove("rotateOut-R");
+        elem.classList.add("rotateOut-R-Prev");
+        setTimeout(() => {
+            elem.classList.remove("rotateOut-R-Prev");
+            elem.classList.add("rotateOut-R");
+        }, 50);
+    }
+}
+
+
+function toggleDetection() {
+    
+    try {
+    const toggleList = []
+
+    const toggle = document.querySelectorAll('.toggleMe');
+    
+    
+    toggle.forEach((elem) => {
+        
+        let tempClass = Array.from(elem.classList)
+
+        const found =  tempClass.find(element => element.startsWith('toggleParent-')).split('toggleParent-')[1];
+
+        toggleList.push(found)
+
+    });
+
+    toggleHandler(toggleList)
+
+    } catch (error) {
+        
+    }
+
+}
+
+toggleDetection();
+
+
+function toggleHandler(elemList){
+
+    elemList.forEach((elem)=>{
+
+        const tempParent = document.querySelector(`.toggleParent-${elem}`)
+        const tempChild = document.querySelector(`.toggleChild-${elem}`)
+
+        if(tempParent&&tempChild){
+            tempParent.addEventListener('change',()=>{
+            
+                if(tempParent.checked&&tempChild!=null){
+                    tempChild.classList.remove('hidden')
+                }else{
+                    tempChild.classList.add('hidden')
+                }
+    
+            })
+        }
+
+
+    })
+
 
 
 }

@@ -1,7 +1,7 @@
 
 /* Slide in Animations  */
 
-/* Slide in from left  */
+/* Slide in from Right  */
 
 .slideIn-R{
     transform: translateX(0);
@@ -13,7 +13,7 @@
     transform:translateX(100%)
 }
 
-/* Slide in from Right  */
+/* Slide in from Left  */
 
 .slideIn-L{
     transform: translateX(0);
@@ -51,6 +51,8 @@
 
 
 /* Fade Animations  */
+
+/* Normal fade in animation  */
 
 .fadeIn{
     opacity: 1;
@@ -218,4 +220,216 @@
 .rotate-R-Prev{
     opacity: 0;
     transform: rotate(-110deg) translateY(-100%) 
+}
+
+
+/* Check out classes  */
+
+
+/* Slide out to Right */
+
+.slideOut-R {
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+.slideOut-R-Prev {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Slide out to Left */
+
+.slideOut-L {
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: all 1.0s ease;
+}
+.slideOut-L-Prev {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Slide out to Top */
+
+.slideOut-T {
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: all 1.0s ease;
+}
+.slideOut-T-Prev {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Slide out to Bottom */
+
+.slideOut-B {
+    transform: translateY(100%);
+    opacity: 0;
+    transition: all 1.0s ease;
+}
+.slideOut-B-Prev {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* fade aimations  */
+
+/* Normal fade out animation */
+
+.fadeOut {
+    opacity: 0;
+    transition: all 2.0s ease;
+}
+.fadeOut-Prev {
+    opacity: 1;
+}
+
+/* Fade out Down Animation */
+
+.fadeOut-D {
+    opacity: 0;
+    transform: translateY(20%);
+    transition: all 1.0s ease;
+}
+.fadeOut-D-Prev {
+    opacity: 1;
+    transform: translateY(0%);
+}
+
+
+/* Fade out Up Animation */
+
+.fadeOut-U {
+    opacity: 0;
+    transform: translateY(-20%);
+    transition: all 1.0s ease;
+}
+.fadeOut-U-Prev {
+    opacity: 1;
+    transform: translateY(0%);
+}
+
+/* Fade out Right Animation */
+
+.fadeOut-R {
+    opacity: 0;
+    transform: translateX(20%);
+    transition: all 1.0s ease;
+}
+.fadeOut-R-Prev {
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+/* Fade out Left Animation */
+
+.fadeOut-L {
+    opacity: 0;
+    transform: translateX(-20%);
+    transition: all 1.0s ease;
+}
+.fadeOut-L-Prev {
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+
+/* zoom animations  */
+
+/* Zoom out Animation */
+
+.zoomOut {
+    opacity: 0;
+    transform: scale(50%);
+    transition: all 1.0s ease;
+}
+.zoomOut-Prev {
+    opacity: 1;
+    transform: scale(100%);
+}
+
+
+/* Zoom Down Animation */
+.zoom-D {
+    opacity: 0;
+    transform: translate(0%, -50%) scale(50%);
+    transition: all 1.0s ease;
+}
+.zoom-D-Prev {
+    opacity: 1;
+    transform: translate(0%, 0%) scale(100%);
+}
+
+
+/* Zoom Up Animation */
+.zoom-U {
+    opacity: 0;
+    transform: translate(0%, 50%) scale(50%);
+    transition: all 1.0s ease;
+}
+.zoom-U-Prev {
+    opacity: 1;
+    transform: translate(0%, 0%) scale(100%);
+}
+
+/* Zoom Right Animation */
+.zoom-R {
+    opacity: 0;
+    transform: translate(80%, 0%) scale(50%);
+    transition: all 1.0s ease;
+}
+.zoom-R-Prev {
+    opacity: 1;
+    transform: translate(0%, 0%) scale(100%);
+}
+
+/* Zoom Left Animation */
+.zoom-L {
+    opacity: 0;
+    transform: translate(-80%, 0%) scale(50%);
+    transition: all 1.0s ease;
+}
+.zoom-L-Prev {
+    opacity: 1;
+    transform: translate(0%, 0%) scale(100%);
+}
+
+
+
+/* Rotate Out animation */
+.rotateOut {
+    opacity: 0;
+    transform: rotate(140deg) scale(50%);
+    transition: all 1.0s ease;
+}
+.rotateOut-Prev {
+    opacity: 1;
+    transform: rotate(0deg) scale(100%);
+}
+
+
+/* Rotate Right animation */
+.rotate-R {
+    opacity: 0;
+    transform: rotate(-110deg) translateY(100%);
+    transition: all 1.0s ease;
+}
+.rotate-R-Prev {
+    opacity: 1;
+    transform: rotate(0deg) translateY(0%);
+}
+
+
+/* Rotate Left animation */
+.rotate-L {
+    opacity: 0;
+    transform: rotate(110deg) translateY(100%);
+    transition: all 1.0s ease;
+}
+.rotate-L-Prev {
+    opacity: 1;
+    transform: rotate(0deg) translateY(0%);
 }
