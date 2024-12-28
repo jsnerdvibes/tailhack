@@ -307,30 +307,20 @@ function toggleDetection() {
 toggleDetection();
 
 
-function toggleHandler(elemList){
+function toggleHandler(elemList) {
+    elemList.forEach((suffix) => {
+        const parentElements = document.querySelectorAll(`.toggleParent-${suffix}`);
+        const childElements = document.querySelectorAll(`.toggleChild-${suffix}`);
 
-    elemList.forEach((elem)=>{
-
-        const tempParent = document.querySelector(`.toggleParent-${elem}`)
-        const tempChild =  document.querySelectorAll(`.toggleChild-${elem}`)
-
-
-
-        if(tempParent&&tempChild.length>0){
-
-            tempParent.addEventListener('change',()=>{
-                                 
-                    tempChild.forEach((childElem)=>{
-                        if(childElem.classList.contains('hidden')){
-                            childElem.classList.remove('hidden')
-                        }else{
-                            childElem.classList.add('hidden')
-                        }
-                    })
-    
-            })
+        if (parentElements.length > 0 && childElements.length > 0) {
+            parentElements.forEach((parentElem) => {
+                parentElem.addEventListener('change', () => {
+                    childElements.forEach((childElem) => {
+                        childElem.classList.toggle('hidden');
+                    });
+                });
+            });
         }
-
-
-    })
+    });
 }
+
