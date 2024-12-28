@@ -312,23 +312,25 @@ function toggleHandler(elemList){
     elemList.forEach((elem)=>{
 
         const tempParent = document.querySelector(`.toggleParent-${elem}`)
-        const tempChild = document.querySelector(`.toggleChild-${elem}`)
+        const tempChild =  document.querySelectorAll(`.toggleChild-${elem}`)
 
-        if(tempParent&&tempChild){
+
+
+        if(tempParent&&tempChild.length>0){
+
             tempParent.addEventListener('change',()=>{
-            
-                if(tempParent.checked&&tempChild!=null){
-                    tempChild.classList.remove('hidden')
-                }else{
-                    tempChild.classList.add('hidden')
-                }
+                                 
+                    tempChild.forEach((childElem)=>{
+                        if(childElem.classList.contains('hidden')){
+                            childElem.classList.remove('hidden')
+                        }else{
+                            childElem.classList.add('hidden')
+                        }
+                    })
     
             })
         }
 
 
     })
-
-
-
 }
