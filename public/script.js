@@ -278,49 +278,32 @@ function checkOutClasses(elem){
 }
 
 
-function toggleDetection() {
+document.querySelectorAll('.toggleMe').forEach((elemt)=>{
+
+    elemt.addEventListener('click',(e)=>{
+        const targetClass = Array.from(e.target.classList)
+
+        try {
+            const found =  targetClass.find(element => element.startsWith('toggleParent-')).split('toggleParent-')[1];
+            toggleElement(found)
+            } catch (error) {
+                console.log('toggleMe class should be followed by "toggleParent-ClassName"',error)
+            }
     
-    try {
-    const toggleList = []
 
-    const toggle = document.querySelectorAll('.toggleMe');
-    
-    
-    toggle.forEach((elem) => {
-        
-        let tempClass = Array.from(elem.classList)
+    })
+})
 
-        const found =  tempClass.find(element => element.startsWith('toggleParent-')).split('toggleParent-')[1];
+function toggleElement(elementName){
 
-        toggleList.push(found)
+    const childElem = Array.from(document.querySelectorAll(`.toggleChild-${elementName}`))
 
-    });
-
-    toggleHandler(toggleList)
-
-    } catch (error) {
-        
+    for(let i=0;i<childElem.length;i++){
+        if(childElem[i].classList.contains('hidden')){
+            childElem[i].classList.remove("hidden");
+        }else{
+            childElem[i].classList.add("hidden");
+        }
     }
 
 }
-
-toggleDetection();
-
-
-function toggleHandler(elemList) {
-    elemList.forEach((suffix) => {
-        const parentElements = document.querySelectorAll(`.toggleParent-${suffix}`);
-        const childElements = document.querySelectorAll(`.toggleChild-${suffix}`);
-
-        if (parentElements.length > 0 && childElements.length > 0) {
-            parentElements.forEach((parentElem) => {
-                parentElem.addEventListener('change', () => {
-                    childElements.forEach((childElem) => {
-                        childElem.classList.toggle('hidden');
-                    });
-                });
-            });
-        }
-    });
-}
-
